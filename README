@@ -1,0 +1,38 @@
+Simple API to test SNMP pdus (made with ASN1.C https://github.com/vlm/asn1c)
+
+make inside each folder to compile.
+
+Encoder:
+
+SNMP Tester 1.0
+This software tests the SNMPV2 API part of this package
+Usage:
+snmptest [OPTIONS]:
+
+Valid options:
+-a --address [IP Adress or hostname]
+-p --port [SNMP port (161 default)]
+-c --community [commnunity string]
+-i --implementation [snmp version (only 2 suported now)]
+-u --pdu [getrequest, getnextrequest, getbulkrequest, setrequest, response]
+-o --oid [oid to be used]
+-s --sintax [integer, string, objectid, ip, counter, ticks, bigcounter, uinteger, reponse_error]
+-v --value [value]
+-t --tag [value]
+-f --filedump [filename]
+-m --maxrepeaters [repeaters]
+-n --nonrepeaters [nonrepeaters]
+-h --help Print this help
+--verbose
+
+
+Decoder:
+
+SNMP Decoder Tester 1.0
+This software tests the SNMPV2 API part of this package
+Usage:
+snmpdecodetest [OPTIONS]:
+
+Valid options:
+-f start a fake agent on port 161
+[filename] pass as argument a buffer saved in binary format
